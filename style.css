@@ -1,0 +1,754 @@
+/*Setarea centrata a imaginii de fundal*/
+
+body.big-page {
+    overflow: hidden;
+    background: url(img/sky.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+/*Pozitia si dimensiunea initiala Soare*/
+
+#sun {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 130px;
+    height: 130px;
+}
+
+
+/*Pozitia si dimensiunea Soarelui la hover*/
+
+#sun:hover {
+    width: 100px;
+    height: 100px;
+}
+
+
+/*Pozitia si dimensiunea Saturn la hover*/
+
+#saturn:hover {
+    width: 85px;
+    height: 85px;
+}
+
+
+/*Pozitia si dimensiunea Mercur la hover*/
+
+#mercury:hover {
+    width: 35px;
+    height: 35px;
+}
+
+
+/*Pozitia si dimensiunea Venus la hover*/
+
+#venus:hover {
+    width: 50px;
+    height: 50px;
+}
+
+
+/*Pozitia si dimensiunea Pamant la hover*/
+
+#earth:hover {
+    width: 40px;
+    height: 40px;
+}
+
+
+/*Pozitia si dimensiunea Marte la hover*/
+
+#mars:hover {
+    width: 40px;
+    height: 40px;
+}
+
+
+/*Pozitia si dimensiunea Jupiter la hover*/
+
+#jupiter:hover {
+    width: 60px;
+    height: 60px;
+}
+
+
+/*Pozitia si dimensiunea Uranus la hover*/
+
+#uranus:hover {
+    width: 50px;
+    height: 50px;
+}
+
+
+/*Pozitia si dimensiunea Neptun la hover*/
+
+#neptune:hover {
+    width: 40px;
+    height: 40px;
+}
+
+
+/*Pozitia si dimensiunea initiala Saturn*/
+
+#saturn {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: orbit2 20s linear infinite;
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+}
+
+
+/*Pozitia si dimensiunea initiala Mercur*/
+
+#mercury {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: orbit1 10s linear infinite;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+
+/*Pozitia si dimensiunea initiala Venus*/
+
+#venus {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: orbit3 15s linear infinite;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+
+/*Pozitia si dimensiunea initiala Pamant*/
+
+#earth {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: orbit4 20s linear infinite;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+
+/*Pozitia si dimensiunea initiala Marte*/
+
+#mars {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: orbit5 27s linear infinite;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+
+/*Pozitia si dimensiunea initiala Jupiter*/
+
+#jupiter {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: orbit6 25s linear infinite;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+
+/*Pozitia si dimensiunea initiala Uranus*/
+
+#uranus {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: orbit7 30s linear infinite;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+
+/*Pozitia si dimensiunea initiala Neptun*/
+
+#neptune {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: orbit8 35s linear infinite;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+
+/*Crearea animatiei pe orbitele corespunzatoare - miscare 0-360 grade cu translatare corespondenta fiecarei planete*/
+
+@keyframes orbit1 {
+    from {
+        transform: rotate(0deg) translateX(70px);
+    }
+    to {
+        transform: rotate(360deg) translateX(70px);
+    }
+}
+
+@keyframes orbit2 {
+    from {
+        transform: rotate(0deg) translateX(320px);
+    }
+    to {
+        transform: rotate(360deg) translateX(320px);
+    }
+}
+
+@keyframes orbit3 {
+    from {
+        transform: rotate(0deg) translateX(120px);
+    }
+    to {
+        transform: rotate(360deg) translateX(120px);
+    }
+}
+
+@keyframes orbit4 {
+    from {
+        transform: rotate(0deg) translateX(170px);
+    }
+    to {
+        transform: rotate(360deg) translateX(170px);
+    }
+}
+
+@keyframes orbit5 {
+    from {
+        transform: rotate(0deg) translateX(220px);
+    }
+    to {
+        transform: rotate(360deg) translateX(220px);
+    }
+}
+
+@keyframes orbit6 {
+    from {
+        transform: rotate(0deg) translateX(270px);
+    }
+    to {
+        transform: rotate(360deg) translateX(270px);
+    }
+}
+
+@keyframes orbit7 {
+    from {
+        transform: rotate(0deg) translateX(370px);
+    }
+    to {
+        transform: rotate(360deg) translateX(370px);
+    }
+}
+
+@keyframes orbit8 {
+    from {
+        transform: rotate(0deg) translateX(420px);
+    }
+    to {
+        transform: rotate(360deg) translateX(420px);
+    }
+}
+
+
+/*Crearea animatiei pe ANTI orbitele corespunzatoare - miscare 360-0 grade cu translatare corespondenta fiecarei planete*/
+
+@keyframes antiOrbit1 {
+    from {
+        transform: rotate(360deg) translateX(70px);
+    }
+    to {
+        transform: rotate(0deg) translateX(70px);
+    }
+}
+
+@keyframes antiOrbit2 {
+    from {
+        transform: rotate(360deg) translateX(320px);
+    }
+    to {
+        transform: rotate(0deg) translateX(320px);
+    }
+}
+
+@keyframes antiOrbit3 {
+    from {
+        transform: rotate(360deg) translateX(120px);
+    }
+    to {
+        transform: rotate(0deg) translateX(120px);
+    }
+}
+
+@keyframes antiOrbit4 {
+    from {
+        transform: rotate(360deg) translateX(170px);
+    }
+    to {
+        transform: rotate(0deg) translateX(170px);
+    }
+}
+
+@keyframes antiOrbit5 {
+    from {
+        transform: rotate(360deg) translateX(220px);
+    }
+    to {
+        transform: rotate(0deg) translateX(220px);
+    }
+}
+
+@keyframes antiOrbit6 {
+    from {
+        transform: rotate(360deg) translateX(270px);
+    }
+    to {
+        transform: rotate(0deg) translateX(270px);
+    }
+}
+
+@keyframes antiOrbit7 {
+    from {
+        transform: rotate(360deg) translateX(370px);
+    }
+    to {
+        transform: rotate(0deg) translateX(370px);
+    }
+}
+
+@keyframes antiOrbit8 {
+    from {
+        transform: rotate(360deg) translateX(420px);
+    }
+    to {
+        transform: rotate(0deg) translateX(420px);
+    }
+}
+
+
+/* Setarea pozitie, dimensiune, stil clasa modal - fundal*/
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 150px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+/* Setarea pozitie, dimensiune, stil clasa modal - continut*/
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    bottom: 10px;
+    padding: 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 50%;
+    height: 65%;
+    overflow: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+
+/* Crearea animatiei pentru modal */
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+
+/* Crearea butonului de inchidere (X) - pozitie, stil*/
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Setarea stilului pentru antetul modalului*/
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #061c4c;
+    color: white;
+}
+
+
+/* Setarea stilului pentru corpul modalului*/
+
+.modal-body {
+    padding: 2px 16px;
+    background-color: white;
+}
+
+
+/* Setarea stilului pentru subsolul modalului*/
+
+.modal-footer {
+    padding: 2px 10px;
+    background-color: #061c4c;
+    color: white;
+}
+
+
+/* Setarea stilului, pozitiei pentru clasa TAB*/
+
+ul.tabs {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+ul.tabs li {
+    background: none;
+    color: #222;
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+ul.tabs li.current {
+    background: #ededed;
+    color: #222;
+}
+
+.tab-content {
+    display: none;
+    background: #ededed;
+    padding: 15px;
+}
+
+.tab-content.current {
+    display: inherit;
+}
+
+
+/* Crearea stilului, pozitiei pentru butoanele radio*/
+
+body {
+    font-family: sans-serif;
+    font-weight: normal;
+    margin: 10px;
+    color: #999;
+    background-color: #eee;
+}
+
+form {
+    margin-top: 0;
+}
+
+div {
+    clear: both;
+    margin: auto;
+}
+
+label {
+    width: 200px;
+    border-radius: 15px;
+    border: 1px solid #D1D3D4
+}
+
+input.radio:empty {
+    margin-left: -999px;
+}
+
+input.radio:empty~label {
+    position: relative;
+    float: left;
+    line-height: 2.5em;
+    text-indent: 3.25em;
+    margin-top: 1em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+input.radio:empty~label:before {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 2.5em;
+    background: #D1D3D4;
+    border-radius: 15px 0 0 15px;
+}
+
+input.radio:hover:not(:checked)~label:before {
+    text-indent: .9em;
+    color: #C2C2C2;
+}
+
+input.radio:hover:not(:checked)~label {
+    color: #888;
+}
+
+input.radio:checked~label:before {
+    text-indent: .9em;
+    background-color: #061c4c;
+}
+
+input.radio:checked~label {
+    color: #777;
+}
+
+input.radio:focus~label:before {
+    box-shadow: 0 0 0 3px #999;
+}
+
+.button {
+    display: inline-block;
+    font-family: sans-serif;
+    font-weight: normal;
+    color: #999;
+    background-color: #eee;
+    width: 200px;
+    border-radius: 15px;
+    border: 1px solid #D1D3D4;
+    padding: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+
+/*Creare stil, pozitie buton NEXT*/
+
+.nextButton {
+    float: right;
+    position: relative;
+    top: 30px;
+    right: 10px;
+}
+
+.nextButton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.nextButton span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.nextButton:hover span {
+    padding-right: 25px;
+}
+
+.nextButton:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+/*Creare stil, pozitie buton PREVIOUS*/
+
+.prevButton {
+    float: left;
+    position: relative;
+    top: 30px;
+    left: -190px;
+}
+
+.prevButton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.prevButton span:after {
+    content: '\00ab';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: -20px;
+    transition: 0.5s;
+}
+
+.prevButton:hover span {
+    padding-left: 25px;
+}
+
+.prevButton:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+/*Creare stil, pozitie buton SUBMIT*/
+
+.submitButton {
+    float: right;
+    position: relative;
+    top: 30px;
+    right: 10px;
+}
+
+.submitButton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.submitButton span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.submitButton:hover span {
+    padding-right: 25px;
+}
+
+.submitButton:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+/* Crearea meniului vertical - drop-down*/
+
+ul li {
+    position: relative;
+    cursor: pointer;
+}
+
+li ul {
+    position: absolute;
+    top: 20px;
+    display: none;
+}
+
+ul li a {
+    display: block;
+    text-decoration: none;
+    color: #777;
+    background: #fff;
+    padding: 5px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 150px;
+}
+
+li:hover ul,
+li.hover ul {
+    display: block;
+}
+
+.section-content {
+    display: none;
+    background: white;
+}
+
+.section-content.current {
+    display: inherit;
+    margin: 0 auto 0 auto;
+}
