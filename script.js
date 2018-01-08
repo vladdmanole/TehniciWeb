@@ -1,84 +1,58 @@
-$(document).ready(function() {
+$(document).ready(function () {
+
+    var planets = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune"];
+
+    //-----PLANET MODAL START-----
+
+    function showPlanetContent(planetId) {
+        $('.section-content').removeClass('current');
+        $("#planet-container div[data-planet=" + planetId + "]").addClass('current');
+    }
+
+    //Corelarea sectiunilor din meniu
+    $('.planet-modal-menu .section-link').click(function () {
+        showPlanetContent($(this).attr("data-section"))
+    });
+
+    $('.planet').click(function (event) {
+        $('#planetModal').css("display", "block");
+        showPlanetContent(event.target.id);
+    })
+
+    //-----PLANET MODAL END-----
+
     //variabila in care se vor stoca raspunsurile alese
     var answers = {};
     //raspunsurile corecte la chestionar
-    var raspCorecte = { "tab-1": "radio1a", "tab-2": "radio2b", "tab-3": "radio3b", "tab-4": "radio4b" };
+    var chosenAnswers = {
+        "tab-1": "radio1a",
+        "tab-2": "radio2b",
+        "tab-3": "radio3b",
+        "tab-4": "radio4b"
+    };
 
     // Initiaza modal
     var sunModal = document.getElementById('sunModal');
-    var planetModal = document.getElementById('planetModal');
-    var sun = document.getElementById("sun");
-    var saturn = document.getElementById("saturn");
-    var mercury = document.getElementById("mercury");
-    var venus = document.getElementById("venus");
-    var earth = document.getElementById("earth");
-    var mars = document.getElementById("mars");
-    var jupiter = document.getElementById("jupiter");
-    var uranus = document.getElementById("uranus");
-    var neptune = document.getElementById("neptune");
-
 
     // Initiaza variabila span care va inchide modalul
     var span = document.getElementsByClassName("close");
 
     // Adauga eveniment pentru deschiderea modalului Soare 
-    sun.onclick = function() {
-            sunModal.style.display = "block";
-        }
-        // Adauga eveniment pentru deschiderea modalului Saturn
-    saturn.onclick = function() {
-            planetModal.style.display = "block";
-            $('#planetModal li[data-section=section6]').click();
-        }
-        // Adauga eveniment pentru deschiderea modalului Mercur
-    mercury.onclick = function() {
-            planetModal.style.display = "block";
-            $('#planetModal li[data-section=section1]').click();
-        }
-        // Adauga eveniment pentru deschiderea modalului Venus
-    venus.onclick = function() {
-            planetModal.style.display = "block";
-            $('#planetModal li[data-section=section2]').click();
-        }
-        // Adauga eveniment pentru deschiderea modalului Pamant
-    earth.onclick = function() {
-            planetModal.style.display = "block";
-            $('#planetModal li[data-section=section3]').click();
-        }
-        // Adauga eveniment pentru deschiderea modalului Marte
-    mars.onclick = function() {
-            planetModal.style.display = "block";
-            $('#planetModal li[data-section=section4]').click();
-        }
-        // Adauga eveniment pentru deschiderea modalului Jupiter
-    jupiter.onclick = function() {
-            planetModal.style.display = "block";
-            $('#planetModal li[data-section=section5]').click();
-        }
-        // Adauga eveniment pentru deschiderea modalului Uranus
-    uranus.onclick = function() {
-            planetModal.style.display = "block";
-            $('#planetModal li[data-section=section7]').click();
-        }
-        // Adauga eveniment pentru deschiderea modalului Neptun
-    neptune.onclick = function() {
-        planetModal.style.display = "block";
-        $('#planetModal li[data-section=section8]').click();
+    sun.onclick = function () {
+        sunModal.style.display = "block";
     }
 
     // Adauga eveniment pentru inchiderea modalelor prin variabila span
-    span[0].onclick = function() {
+    span[0].onclick = function () {
         sunModal.style.display = "none";
     }
 
-    span[1].onclick = function() {
+    span[1].onclick = function () {
         planetModal.style.display = "none";
     }
 
-
-
     // Adauga eveniment pentru inchiderea modalului la apasarea unei zone exterioare acestuia
-    window.onclick = function(event) {
+    window.onclick = function (event) {
         if (event.target == planetModal) {
             sunModal.style.display = "none";
         }
@@ -88,7 +62,7 @@ $(document).ready(function() {
     }
 
     //Schimbarea taburilor prin selectarea acestora
-    $('ul.tabs li').click(function() {
+    $('ul.tabs li').click(function () {
         var tab_id = $(this).attr('data-tab');
         $('ul.tabs li').removeClass('current');
         $('.tab-content').removeClass('current');
@@ -97,14 +71,14 @@ $(document).ready(function() {
     })
 
     //Asignarea valorilor raspunsurilor alese in variabila answers
-    $('.radio').click(function() {
+    $('.radio').click(function () {
         var clickedID = this.id;
         answers[$(this).parents('.current').attr('id')] = this.id;
 
     });
 
     //Schimbarea taburilor prin actionarea butonului NEXT
-    $('.nextButton').click(function() {
+    $('.nextButton').click(function () {
         $('ul.tabs li').removeClass('current');
         $('.tab-content').removeClass('current');
         $(this).addClass('current');
@@ -113,7 +87,7 @@ $(document).ready(function() {
 
 
     //Schimbarea taburilor prin actionarea butonului PREVIOUS
-    $('.prevButton').click(function() {
+    $('.prevButton').click(function () {
         $('ul.tabs li').removeClass('current');
         $('.tab-content').removeClass('current');
         $(this).addClass('current');
@@ -122,7 +96,7 @@ $(document).ready(function() {
 
 
     //Evenimentul pentru actionarea butonului SUBMIT
-    $('.submitButton').click(function() {
+    $('.submitButton').click(function () {
 
         //Variabila care retine numarul de raspunsuri alese
         var count = Object.keys(answers).length;
@@ -136,8 +110,8 @@ $(document).ready(function() {
         }
 
         arrraspCorecte = [];
-        for (var i in raspCorecte) {
-            arrraspCorecte[i] = raspCorecte[i];
+        for (var i in chosenAnswers) {
+            arrraspCorecte[i] = chosenAnswers[i];
         }
 
         //In cazul in care s-a raspuns la toate intrebarile
@@ -155,7 +129,7 @@ $(document).ready(function() {
                 if (raspAlese[i] == arrraspCorecte[i]) k++;
                 //Stocarea intrebarii, raspunsului corect si raspunsului ales de utilizator
                 intrebari.push($("#" + i).children("h1").html());
-                strraspcor.push(document.getElementById(raspCorecte[i] + 'Label').textContent);
+                strraspcor.push(document.getElementById(chosenAnswers[i] + 'Label').textContent);
                 strraspales.push(document.getElementById(raspAlese[i] + 'Label').textContent);
             }
             $('#tab-5').append("<p>", k, " / 4 correct answers! </p>");
@@ -178,20 +152,17 @@ $(document).ready(function() {
         }
     });
 
-
-
-
     //Meniul vertical
-    startList = function() {
+    startList = function () {
         if (document.all && document.getElementById) {
             navRoot = document.getElementById("nav");
             for (i = 0; i < navRoot.childNodes.length; i++) {
                 node = navRoot.childNodes[i];
                 if (node.nodeName == "LI") {
-                    node.onmouseover = function() {
+                    node.onmouseover = function () {
                         this.className += " over";
                     }
-                    node.onmouseout = function() {
+                    node.onmouseout = function () {
                         this.className = this.className.replace(" over", "");
                     }
                 }
@@ -200,19 +171,8 @@ $(document).ready(function() {
     }
     window.onload = startList();
 
-    //Corelarea sectiunilor din meniu
-    $('ul.menu li').click(function() {
-        var section_id = $(this).attr('data-section');
-
-        $('ul.menu li').removeClass('current');
-        $('.section-content').removeClass('current');
-
-        $(this).addClass('current');
-        $("#" + section_id).addClass('current');
-    });
-
     //Eveniment pentru interactiunea cu utilizatorul - alegerea orbitei si a vitezei planetelor
-    $('.apply').click(function() {
+    $('.apply').click(function () {
         var planet = document.getElementById($(this).attr('data-submit')); //variabila in care se stocheaza id ul planetei pe care se face click
         var orbit = $(this).siblings('.chooseOrbit').children('input[type=radio]:checked').attr('id'); //variabila in care se stocheaza  optiunea de schimbare a orbitei 
         var speed = $(this).siblings('.speed').val(); //variabila in care se stocheaza viteza introdusa de utilizator 

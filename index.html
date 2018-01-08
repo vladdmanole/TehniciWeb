@@ -8,8 +8,6 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="jquery-3.1.1.js"></script>
-    <script src="script.js"></script>
 </head>
 
 <body class="big-page">
@@ -61,8 +59,11 @@
                             <input type="radio" name="radio" id="radio1c" class="radio" />
                             <label for="radio1c" id="radio1cLabel">Ten</label>
                         </div>
-                        <br><br>
-                        <button class="button nextButton" id="next1" type="button"><span>Next</span></button>
+                        <br>
+                        <br>
+                        <button class="button nextButton" id="next1" type="button">
+                            <span>Next</span>
+                        </button>
                     </div>
                     <!--Crearea tab2 si optiunilor de raspuns-->
                     <div id="tab-2" class="tab-content">
@@ -81,9 +82,14 @@
                             <input type="radio" name="radio1" id="radio2c" class="radio" />
                             <label for="radio2c" id="radio2cLabel">Saturn</label>
                         </div>
-                        <br><br>
-                        <button class="button prevButton" id="prev2" type="button"><span>Previous</span></button>
-                        <button class="button nextButton" id="next2" type="button"><span>Next</span></button>
+                        <br>
+                        <br>
+                        <button class="button prevButton" id="prev2" type="button">
+                            <span>Previous</span>
+                        </button>
+                        <button class="button nextButton" id="next2" type="button">
+                            <span>Next</span>
+                        </button>
                     </div>
 
                     <!--Crearea tab3 si optiunilor de raspuns-->
@@ -103,9 +109,14 @@
                             <input type="radio" name="radio2" id="radio3c" class="radio" />
                             <label for="radio3c" id="radio3cLabel">Neptune</label>
                         </div>
-                        <br><br>
-                        <button class="button prevButton" id="prev3" type="button"><span>Previous</span></button>
-                        <button class="button nextButton" id="next3" type="button"><span>Next</span></button>
+                        <br>
+                        <br>
+                        <button class="button prevButton" id="prev3" type="button">
+                            <span>Previous</span>
+                        </button>
+                        <button class="button nextButton" id="next3" type="button">
+                            <span>Next</span>
+                        </button>
                     </div>
                     <!--Crearea tab4 si optiunilor de raspuns-->
 
@@ -126,9 +137,14 @@
                             <input type="radio" name="radio3" id="radio4c" class="radio" />
                             <label for="radio4c" id="radio4cLabel">Earth</label>
                         </div>
-                        <br><br>
-                        <button class="button prevButton" id="prev4" type="button"><span>Previous</span></button>
-                        <button class="button submitButton" id="submitButton" type="button"><span>Submit</span></button>
+                        <br>
+                        <br>
+                        <button class="button prevButton" id="prev4" type="button">
+                            <span>Previous</span>
+                        </button>
+                        <button class="button submitButton" id="submitButton" type="button">
+                            <span>Submit</span>
+                        </button>
                     </div>
                     <!--Crearea tab5 si afisarea rapsunsurilor corecte-->
                     <div id="tab-5" class="tab-content">
@@ -152,22 +168,40 @@
             <div class="modal-body">
                 <ul id="nav">
                     <li> &#9776;
-                        <ul class="menu">
-                            <li class="section-link" data-section="section1"><a href="#">Mercury</a></li>
-                            <li class="section-link" data-section="section2"><a href="#">Venus</a></li>
-                            <li class="section-link" data-section="section3"><a href="#">Earth</a></li>
-                            <li class="section-link" data-section="section4"><a href="#">Mars</a></li>
-                            <li class="section-link" data-section="section5"><a href="#">Jupiter</a></li>
-                            <li class="section-link" data-section="section6"><a href="#">Saturn</a></li>
-                            <li class="section-link" data-section="section7"><a href="#">Uranus</a></li>
-                            <li class="section-link" data-section="section8"><a href="#">Neptune</a></li>
+                        <ul class="menu planet-modal-menu">
+                            <li class="section-link" data-section="mercury">
+                                <a href="#">Mercury</a>
+                            </li>
+                            <li class="section-link" data-section="venus">
+                                <a href="#">Venus</a>
+                            </li>
+                            <li class="section-link" data-section="earth">
+                                <a href="#">Earth</a>
+                            </li>
+                            <li class="section-link" data-section="mars">
+                                <a href="#">Mars</a>
+                            </li>
+                            <li class="section-link" data-section="jupiter">
+                                <a href="#">Jupiter</a>
+                            </li>
+                            <li class="section-link" data-section="saturn">
+                                <a href="#">Saturn</a>
+                            </li>
+                            <li class="section-link" data-section="uranus">
+                                <a href="#">Uranus</a>
+                            </li>
+                            <li class="section-link" data-section="neptune">
+                                <a href="#">Neptune</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
-                <div id="section-container" style="text-align: center">
-                    <div id="section1" class="section-content">
+                <div id="planet-container" style="text-align: center">
+                    <div data-planet="mercury" class="section-content">
                         <!--Modificare orbita si viteza planetei Mercur-->
-                        <h1> MERCURY </h1> <br> Change speed: <input type="text" class="speed" value="10">
+                        <h1> MERCURY </h1>
+                        <br> Change speed:
+                        <input type="text" class="speed" value="10">
 
                         <form class="chooseOrbit" data-form="mercury">
                             <br>
@@ -181,8 +215,10 @@
                         <button class="apply" type="button" data-submit="mercury"> Apply </button>
                     </div>
                     <!--Modificare orbita si viteza planetei Venus-->
-                    <div id="section2" class="section-content">
-                        <h1> VENUS </h1> <br> Change speed: <input type="text" class="speed" value="15">
+                    <div data-planet="venus" class="section-content">
+                        <h1> VENUS </h1>
+                        <br> Change speed:
+                        <input type="text" class="speed" value="15">
 
                         <form class="chooseOrbit" data-form="venus">
                             <br>
@@ -196,8 +232,10 @@
                         <button class="apply" type="button" data-submit="venus"> Apply </button>
                     </div>
                     <!--Modificare orbita si viteza planetei Pamant-->
-                    <div id="section3" class="section-content">
-                        <h1> EARTH </h1> <br> Change speed: <input type="text" class="speed" value="20">
+                    <div data-planet="earth" class="section-content">
+                        <h1> EARTH </h1>
+                        <br> Change speed:
+                        <input type="text" class="speed" value="20">
 
                         <form class="chooseOrbit" data-form="earth">
                             <br>
@@ -211,8 +249,10 @@
                         <button class="apply" type="button" data-submit="earth"> Apply </button>
                     </div>
                     <!--Modificare orbita si viteza planetei Marte-->
-                    <div id="section4" class="section-content">
-                        <h1> MARS </h1> <br> Change speed: <input type="text" class="speed" value="27">
+                    <div data-planet="mars" class="section-content">
+                        <h1> MARS </h1>
+                        <br> Change speed:
+                        <input type="text" class="speed" value="27">
 
                         <form class="chooseOrbit" data-form="mars">
                             <br>
@@ -226,8 +266,10 @@
                         <button class="apply" type="button" data-submit="mars"> Apply </button>
                     </div>
                     <!--Modificare orbita si viteza planetei Jupiter-->
-                    <div id="section5" class="section-content">
-                        <h1> JUPITER </h1> <br> Change speed: <input type="text" class="speed" value="25">
+                    <div data-planet="jupiter" class="section-content">
+                        <h1> JUPITER </h1>
+                        <br> Change speed:
+                        <input type="text" class="speed" value="25">
 
                         <form class="chooseOrbit" data-form="jupiter">
                             <br>
@@ -241,8 +283,10 @@
                         <button class="apply" type="button" data-submit="jupiter"> Apply </button>
                     </div>
                     <!--Modificare orbita si viteza planetei Saturn-->
-                    <div id="section6" class="section-content">
-                        <h1> SATURN </h1> <br> Change speed: <input type="text" class="speed" value="20">
+                    <div data-planet="saturn" class="section-content">
+                        <h1> SATURN </h1>
+                        <br> Change speed:
+                        <input type="text" class="speed" value="20">
 
                         <form class="chooseOrbit" data-form="saturn">
                             <br>
@@ -256,8 +300,10 @@
                         <button class="apply" type="button" data-submit="saturn"> Apply </button>
                     </div>
                     <!--Modificare orbita si viteza planetei Uranus-->
-                    <div id="section7" class="section-content">
-                        <h1> URANUS </h1> <br> Change speed: <input type="text" class="speed" value="30">
+                    <div data-planet="uranus" class="section-content">
+                        <h1> URANUS </h1>
+                        <br> Change speed:
+                        <input type="text" class="speed" value="30">
 
                         <form class="chooseOrbit" data-form="uranus">
                             <br>
@@ -271,8 +317,10 @@
                         <button class="apply" type="button" data-submit="uranus"> Apply </button>
                     </div>
                     <!--Modificare orbita si viteza planetei Neptun-->
-                    <div id="section8" class="section-content">
-                        <h1> NEPTUNE </h1> <br> Change speed: <input type="text" class="speed" value="35">
+                    <div data-planet="neptune" class="section-content">
+                        <h1> NEPTUNE </h1>
+                        <br> Change speed:
+                        <input type="text" class="speed" value="35">
 
                         <form class="chooseOrbit" data-form="neptune">
                             <br>
@@ -290,6 +338,8 @@
         </div>
     </div>
 
+    <script src="jquery-3.1.1.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
