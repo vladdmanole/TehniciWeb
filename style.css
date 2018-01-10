@@ -2,13 +2,9 @@
 
 body.big-page {
     overflow: hidden;
-    background: url(img/sky.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background: url(img/sky.jpg) no-repeat center fixed;
     background-size: cover;
 }
-
 
 /*Pozitia si dimensiunea initiala Soare*/
 
@@ -388,7 +384,6 @@ body.big-page {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -407,25 +402,12 @@ body.big-page {
     height: 65%;
     overflow: auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
     animation-duration: 0.4s
 }
 
 
 /* Crearea animatiei pentru modal */
-
-@-webkit-keyframes animatetop {
-    from {
-        top: -300px;
-        opacity: 0
-    }
-    to {
-        top: 0;
-        opacity: 1
-    }
-}
 
 @keyframes animatetop {
     from {
@@ -481,32 +463,13 @@ body.big-page {
     color: white;
 }
 
-
-/* Setarea stilului, pozitiei pentru clasa TAB*/
-
-ul.tabs {
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-}
-
-ul.tabs li {
-    background: none;
-    color: #222;
-    display: inline-block;
-    padding: 10px 15px;
-    cursor: pointer;
-}
-
-ul.tabs li.current {
+.answers {
     background: #ededed;
-    color: #222;
+    padding: 15px;
 }
 
 .tab-content {
     display: none;
-    background: #ededed;
-    padding: 15px;
 }
 
 .tab-content.current {
@@ -546,13 +509,10 @@ input.radio:empty {
 input.radio:empty~label {
     position: relative;
     float: left;
-    line-height: 2.5em;
-    text-indent: 3.25em;
-    margin-top: 1em;
+    line-height: 1.5em;
+    text-indent: 2.95em;
+    margin-top: 0.3em;
     cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
 
@@ -596,10 +556,10 @@ input.radio:focus~label:before {
     font-weight: normal;
     color: #999;
     background-color: #eee;
-    width: 200px;
-    border-radius: 15px;
+    width: 100px;
+    border-radius: 5px;
     border: 1px solid #D1D3D4;
-    padding: 20px;
+    padding: 10px;
     transition: all 0.5s;
     cursor: pointer;
 }
@@ -608,6 +568,7 @@ input.radio:focus~label:before {
 /*Creare stil, pozitie buton NEXT*/
 
 .nextButton {
+    display: none;
     float: right;
     position: relative;
     top: 30px;
@@ -646,7 +607,6 @@ input.radio:focus~label:before {
     float: left;
     position: relative;
     top: 30px;
-    left: -190px;
 }
 
 .prevButton span {
@@ -678,6 +638,7 @@ input.radio:focus~label:before {
 /*Creare stil, pozitie buton SUBMIT*/
 
 .submitButton {
+    display: none;
     float: right;
     position: relative;
     top: 30px;
@@ -712,6 +673,15 @@ input.radio:focus~label:before {
 
 /* Crearea meniului vertical - drop-down*/
 
+.menu {
+    display: none;
+}
+
+.hamburger:hover .menu {
+    display: block;
+    position: absolute;
+}
+
 ul li {
     position: relative;
     cursor: pointer;
@@ -724,10 +694,10 @@ li ul {
 }
 
 ul li a {
-    display: block;
-    text-decoration: none;
+    display: inline-block;
+    text-decoration: underline;
     color: #777;
-    background: #fff;
+    background: white;
     padding: 5px;
 }
 

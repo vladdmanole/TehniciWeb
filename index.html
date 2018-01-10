@@ -34,29 +34,21 @@
             </div>
             <div class="modal-body">
                 <div class="container">
-
-                    <ul class="tabs">
-                        <li class="tab-link current" data-tab="tab-1"></li>
-                        <li class="tab-link" data-tab="tab-2"></li>
-                        <li class="tab-link" data-tab="tab-3"></li>
-                        <li class="tab-link" data-tab="tab-4"></li>
-                        <li class="tab-link" data-tab="tab-5"></li>
-                    </ul>
                     <!--Crearea tab1 si optiunilor de raspuns-->
                     <div id="tab-1" class="tab-content current">
                         <h1> How many planets are in our solar system? </h1>
                         <div>
-                            <input type="radio" name="radio" id="radio1a" class="radio" />
+                            <input type="radio" name="radio" id="radio1a" class="radio radioAnswers" />
                             <label for="radio1a" id="radio1aLabel">Eight</label>
                         </div>
 
                         <div>
-                            <input type="radio" name="radio" id="radio1b" class="radio" />
+                            <input type="radio" name="radio" id="radio1b" class="radio radioAnswers" />
                             <label for="radio1b" id="radio1bLabel">One</label>
                         </div>
 
                         <div>
-                            <input type="radio" name="radio" id="radio1c" class="radio" />
+                            <input type="radio" name="radio" id="radio1c" class="radio radioAnswers" />
                             <label for="radio1c" id="radio1cLabel">Ten</label>
                         </div>
                         <br>
@@ -69,17 +61,17 @@
                     <div id="tab-2" class="tab-content">
                         <h1> Which planet is closest to the Sun?</h1>
                         <div>
-                            <input type="radio" name="radio1" id="radio2a" class="radio" />
+                            <input type="radio" name="radio1" id="radio2a" class="radio radioAnswers" />
                             <label for="radio2a" id="radio2aLabel">Earth</label>
                         </div>
 
                         <div>
-                            <input type="radio" name="radio1" id="radio2b" class="radio" />
+                            <input type="radio" name="radio1" id="radio2b" class="radio radioAnswers" />
                             <label for="radio2b" id="radio2bLabel">Mercury</label>
                         </div>
 
                         <div>
-                            <input type="radio" name="radio1" id="radio2c" class="radio" />
+                            <input type="radio" name="radio1" id="radio2c" class="radio radioAnswers" />
                             <label for="radio2c" id="radio2cLabel">Saturn</label>
                         </div>
                         <br>
@@ -96,17 +88,17 @@
                     <div id="tab-3" class="tab-content">
                         <h1> Which is the biggest planet?</h1>
                         <div>
-                            <input type="radio" name="radio2" id="radio3a" class="radio" />
+                            <input type="radio" name="radio2" id="radio3a" class="radio radioAnswers" />
                             <label for="radio3a" id="radio3aLabel">Mars</label>
                         </div>
 
                         <div>
-                            <input type="radio" name="radio2" id="radio3b" class="radio" />
+                            <input type="radio" name="radio2" id="radio3b" class="radio radioAnswers" />
                             <label for="radio3b" id="radio3bLabel">Jupiter</label>
                         </div>
 
                         <div>
-                            <input type="radio" name="radio2" id="radio3c" class="radio" />
+                            <input type="radio" name="radio2" id="radio3c" class="radio radioAnswers" />
                             <label for="radio3c" id="radio3cLabel">Neptune</label>
                         </div>
                         <br>
@@ -124,17 +116,17 @@
 
                         <h1> Which planet has the longest day?</h1>
                         <div>
-                            <input type="radio" name="radio3" id="radio4a" class="radio" />
+                            <input type="radio" name="radio3" id="radio4a" class="radio radioAnswers" />
                             <label for="radio4a" id="radio4aLabel">Saturn</label>
                         </div>
 
                         <div>
-                            <input type="radio" name="radio3" id="radio4b" class="radio" />
+                            <input type="radio" name="radio3" id="radio4b" class="radio radioAnswers" />
                             <label for="radio4b" id="radio4bLabel">Venus</label>
                         </div>
 
                         <div>
-                            <input type="radio" name="radio3" id="radio4c" class="radio" />
+                            <input type="radio" name="radio3" id="radio4c" class="radio radioAnswers" />
                             <label for="radio4c" id="radio4cLabel">Earth</label>
                         </div>
                         <br>
@@ -197,148 +189,14 @@
                     </li>
                 </ul>
                 <div id="planet-container" style="text-align: center">
-                    <div data-planet="mercury" class="section-content">
-                        <!--Modificare orbita si viteza planetei Mercur-->
-                        <h1> MERCURY </h1>
-                        <br> Change speed:
-                        <input type="text" class="speed" value="10">
-
-                        <form class="chooseOrbit" data-form="mercury">
-                            <br>
-                            <input type="radio" name="orbit" id="orbit1" />
-                            <label for="orbit1">Clockwise Rotation</label>
-                            <br>
-                            <input type="radio" name="orbit" id="antiOrbit1" />
-                            <label for="antiOrbit1">Counter-Clockwise Rotation</label>
-                        </form>
-
-                        <button class="apply" type="button" data-submit="mercury"> Apply </button>
-                    </div>
-                    <!--Modificare orbita si viteza planetei Venus-->
-                    <div data-planet="venus" class="section-content">
-                        <h1> VENUS </h1>
-                        <br> Change speed:
-                        <input type="text" class="speed" value="15">
-
-                        <form class="chooseOrbit" data-form="venus">
-                            <br>
-                            <input type="radio" name="orbit" id="orbit3" />
-                            <label for="orbit3">Clockwise Rotation</label>
-                            <br>
-                            <input type="radio" name="orbit" id="antiOrbit3" />
-                            <label for="antiOrbit3">Counter-Clockwise Rotation</label>
-                        </form>
-
-                        <button class="apply" type="button" data-submit="venus"> Apply </button>
-                    </div>
-                    <!--Modificare orbita si viteza planetei Pamant-->
-                    <div data-planet="earth" class="section-content">
-                        <h1> EARTH </h1>
-                        <br> Change speed:
-                        <input type="text" class="speed" value="20">
-
-                        <form class="chooseOrbit" data-form="earth">
-                            <br>
-                            <input type="radio" name="orbit" id="orbit4" />
-                            <label for="orbit4">Clockwise Rotation</label>
-                            <br>
-                            <input type="radio" name="orbit" id="antiOrbit4" />
-                            <label for="antiOrbit4">Counter-Clockwise Rotation</label>
-                        </form>
-
-                        <button class="apply" type="button" data-submit="earth"> Apply </button>
-                    </div>
-                    <!--Modificare orbita si viteza planetei Marte-->
-                    <div data-planet="mars" class="section-content">
-                        <h1> MARS </h1>
-                        <br> Change speed:
-                        <input type="text" class="speed" value="27">
-
-                        <form class="chooseOrbit" data-form="mars">
-                            <br>
-                            <input type="radio" name="orbit" id="orbit5" />
-                            <label for="orbit5">Clockwise Rotation</label>
-                            <br>
-                            <input type="radio" name="orbit" id="antiOrbit5" />
-                            <label for="antiOrbit5">Counter-Clockwise Rotation</label>
-                        </form>
-
-                        <button class="apply" type="button" data-submit="mars"> Apply </button>
-                    </div>
-                    <!--Modificare orbita si viteza planetei Jupiter-->
-                    <div data-planet="jupiter" class="section-content">
-                        <h1> JUPITER </h1>
-                        <br> Change speed:
-                        <input type="text" class="speed" value="25">
-
-                        <form class="chooseOrbit" data-form="jupiter">
-                            <br>
-                            <input type="radio" name="orbit" id="orbit6" />
-                            <label for="orbit6">Clockwise Rotation</label>
-                            <br>
-                            <input type="radio" name="orbit" id="antiOrbit6" />
-                            <label for="antiOrbit6">Counter-Clockwise Rotation</label>
-                        </form>
-
-                        <button class="apply" type="button" data-submit="jupiter"> Apply </button>
-                    </div>
-                    <!--Modificare orbita si viteza planetei Saturn-->
-                    <div data-planet="saturn" class="section-content">
-                        <h1> SATURN </h1>
-                        <br> Change speed:
-                        <input type="text" class="speed" value="20">
-
-                        <form class="chooseOrbit" data-form="saturn">
-                            <br>
-                            <input type="radio" name="orbit" id="orbit2" />
-                            <label for="orbit2">Clockwise Rotation</label>
-                            <br>
-                            <input type="radio" name="orbit" id="antiOrbit2" />
-                            <label for="antiOrbit2">Counter-Clockwise Rotation</label>
-                        </form>
-
-                        <button class="apply" type="button" data-submit="saturn"> Apply </button>
-                    </div>
-                    <!--Modificare orbita si viteza planetei Uranus-->
-                    <div data-planet="uranus" class="section-content">
-                        <h1> URANUS </h1>
-                        <br> Change speed:
-                        <input type="text" class="speed" value="30">
-
-                        <form class="chooseOrbit" data-form="uranus">
-                            <br>
-                            <input type="radio" name="orbit" id="orbit7" />
-                            <label for="orbit7">Clockwise Rotation</label>
-                            <br>
-                            <input type="radio" name="orbit" id="antiOrbit7" />
-                            <label for="antiOrbit7">Counter-Clockwise Rotation</label>
-                        </form>
-
-                        <button class="apply" type="button" data-submit="uranus"> Apply </button>
-                    </div>
-                    <!--Modificare orbita si viteza planetei Neptun-->
-                    <div data-planet="neptune" class="section-content">
-                        <h1> NEPTUNE </h1>
-                        <br> Change speed:
-                        <input type="text" class="speed" value="35">
-
-                        <form class="chooseOrbit" data-form="neptune">
-                            <br>
-                            <input type="radio" name="orbit" id="orbit8" />
-                            <label for="orbit8">Clockwise Rotation</label>
-                            <br>
-                            <input type="radio" name="orbit" id="antiOrbit8" />
-                            <label for="antiOrbit8">Counter-Clockwise Rotation</label>
-                        </form>
-
-                        <button class="apply" type="button" data-submit="neptune"> Apply </button>
-                    </div>
+                    
                 </div>
             </div>
         </div>
     </div>
 
     <script src="jquery-3.1.1.js"></script>
+    <script src="data/planets.js"></script>
     <script src="script.js"></script>
 </body>
 
